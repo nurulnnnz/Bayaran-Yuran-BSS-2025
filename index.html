@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Bayaran Ahli</title>
+</head>
+<body>
+    <h1>Kemaskini Bayaran Ahli</h1>
+    <form id="paymentForm">
+        <label for="namaAhli">Nama Ahli:</label>
+        <input type="text" id="namaAhli" required><br>
+
+        <label for="nomborTelefon">Nombor Telefon:</label>
+        <input type="tel" id="nomborTelefon" required><br>
+
+        <label for="nomborRumah">Nombor Rumah:</label>
+        <input type="text" id="nomborRumah" required><br>
+
+        <label for="tarikhBayaran">Tarikh Bayaran:</label>
+        <input type="date" id="tarikhBayaran" required><br>
+
+        <label for="amaunBayaran">Amaun Bayaran (RM):</label>
+        <input type="number" id="amaunBayaran" required><br>
+
+        <button type="submit">Kemaskini Bayaran</button>
+    </form>
+
+    <p id="statusMessage"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
