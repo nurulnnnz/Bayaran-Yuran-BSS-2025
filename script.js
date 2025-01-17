@@ -23,11 +23,28 @@ document.getElementById('paymentForm').addEventListener('submit', async (event) 
                 amaunBayaran,
             }),
         });
+        console.log('Data yang dihantar:', {
+    namaAhli,
+    nomborTelefon,
+    nomborRumah,
+    tarikhBayaran,
+    amaunBayaran
+});
+
+const result = await response.json();
+console.log('Respons dari server:', result);
+
+if (response.ok) {
+    document.getElementById('statusMessage').textContent = result.message;
+} else {
+    document.getElementById('statusMessage').textContent = 'Ralat berlaku semasa menghantar data.';
+}
 
         const result = await response.json();
         document.getElementById('statusMessage').textContent = result.message;
-    } catch (error) {
-        console.error('Ralat:', error);
-        document.getElementById('statusMessage').textContent = 'Ralat berlaku semasa menghantar data.';
-    }
+   } catch (error) {
+    console.error('Ralat semasa menghantar data:', error);
+    document.getElementById('statusMessage').textContent = 'Ralat berlaku semasa menghantar data.';
+}
+
 });
